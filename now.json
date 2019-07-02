@@ -1,7 +1,7 @@
 {
-  "version": 2,
-  "name": "landing_pototo",
-  "builds": [
-    { "src": "index.html", "use": "@now/html-minifier", "css": "/style.css" }
-  ]
-}
+    "version": 2,
+    "name": "employees-engagement",
+    "alias": "poto.to"
+  }
+  
+  
