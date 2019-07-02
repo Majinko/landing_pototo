@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    min-width: 1500px;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    background: white;
+}
+.navbar {
+    list-style: none;
+    margin: 0;
+    overflow: auto;
+    width: 85%;
+    height: 57px;
+    margin: auto;
+    padding-top: 8px;
+}
+
+.navbar ul {
+    display: block;
+    margin: auto;
+}
+
+.navbar li {
+    float: right;
+    height: 100%;
+}
+
+.navbar img {
+    float: left;
+}
+
+.navbar li a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    color: black;
+    padding: 17px 25px;
+}
+
+.navbar li a:hover {
+    color: #0099FF;
+    border-bottom: 4px #0099FF solid;
+}
+
+#start-page {
+    margin-top: 30px;
+}
+
+#start-page, #benefits-page {
+    background: #f2f2f2;
+}
+
+.block-page {
+    overflow: auto;
+    width: 85%;    
+	max-width: 1600px;
+    margin: auto;
+}
+
+#box-1, .box-3 {
+    display: inline-block;
+    box-sizing: border-box;
+    float: inline-start;
+    width: 50%;
+
+    margin: 50px 0;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#box-1 p, .box-3 p , .box-4 p{
+    margin: 10% 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#box-1 button, .box-3 button {
+    display: block;
+    box-sizing: border-box;
+    width: 70%;
+    height: 45px;
+    background: #0099FF;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#box-2, .box-4 {
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    float: right;
+    margin: 70px 0;
+}
+
+.important-text {
+    color: #0099FF;
+}
+
+#benefits-page-content {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#benefits-page-content h1 {
+    margin-bottom: 70px;
+}
+
+#benefits-boxes-1 {
+    overflow: hidden; 
+    width: 50%;
+    margin: auto;
+}
+
+#benefits-boxes-1 .benefit-box-1 {
+    float: left;
+}
+
+#benefits-boxes-1 .benefit-box-2 {
+    float: right;
+}
+
+#benefits-boxes-2 {
+    overflow: hidden; 
+    width: 50%;
+    margin: auto;
+}
+
+#benefits-boxes-2 .benefit-box-2 {
+    float: left;
+}
+
+#benefits-boxes-2 .benefit-box-1 {
+    float: right;
+}
+
+.benefit-box-1 {
+    margin: 10px;
+    width: 290px;
+    height: 110px;
+    background: #0099FF;
+    color: white;
+    padding: 20px 0;
+}
+
+.benefit-box-1 h2 {
+    position: relative;
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.benefit-box-1 p {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.benefit-box-2 {
+    width: 250px;
+    height: 80px;
+    border: #0099FF 3px solid;
+    padding: 20px 0;
+    position: relative;
+    margin: 25px;
+}
+
+.benefit-box-2 p {
+    font-size: 11px;
+    font-weight: bold;
+    color: #979797;
+}
+
+.benefit-box-2 h2 {
+    position: relative;
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 23px;
+    color: #0099FF;
+}
+
+#feedback-culture {
+    text-align: left;
+}
+
+.box-3 {
+    margin-top: 100px;
+}
+
+.box-4 {
+    position: relative;
+    margin-right: 70px;
+}
+
+#app-flow {
+    background: #0099FF;
+    color: white;
+}
+
+#app-flow #app-flow-content h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#app-flow #app-flow-content p {
+    margin: 70px 0px 70px 100px;
+}
+
+#app-flow-first, #app-flow-second, #app-flow-third {
+    overflow: hidden;
+}
+
+#app-flow #app-flow-content img {
+    position: relative;
+    top: 0;
+}
+
+#app-flow #app-flow-content .b-3 {
+    width: 35%;
+    margin: 0;
+    margin-left: 50px;
+}
+
+.b-y {
+    width: 35%;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+#app-flow #app-flow-content .b-4 {
+    margin: 0;
+}
+
+.b-x {
+    margin: 0;
+    overflow: hidden;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+}
+
+#app-flow #app-flow-content .b-y p {
+    margin: 10% 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 200px;
+    font-weight: bold;
+    position: relative;
+    left: 250px;
+    top: -250px;
+}
+
+.number-x {
+    font-size: 200px;
+    font-weight: bold;
+    position: relative;
+    float: left;
+    left: 250px;
+    top: -45px;
+
+}
+
+#company-culture {
+    background: #f2f2f2;
+}
+
+#company-culture-first, #company-culture-second, #company-culture-third {
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+#company-culture #company-culture-content .box-3 {
+    padding-left: 100px;
+    margin-top: 50px;
+    width: 40%;
+}
+
+#company-culture #company-culture-content .box-4 {
+    margin-top: 0px;
+}
+
+#company-culture #company-culture-content h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#company-culture #company-culture-content h2 {
+    color: #0099FF;
+    font-weight: bold;
+    font-size: 26px;
+    position: relative;
+}
+
+#company-culture #company-culture-content p {
+    font-size: 16px;
+    color: #454545;
+    margin: 40px 0;
+}
+
+#company-culture #company-culture-content img {
+    position: relative;
+    top: 0;
+}
+
+#company-culture #company-culture-content #company-culture-second .b-x {
+    float: right;
+    padding-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#company-culture #company-culture-content #company-culture-second .b-y {
+    margin-left: 130px;
+}
+
+#company-culture #company-culture-content .number_1 {
+    position: relative;
+    font-size: 220px;
+    font-weight: bold;
+    left: 120px;
+    top: 30px;
+    float: left;
+    opacity: 0.1;
+} 
+
+#company-culture #company-culture-content .number_2 {
+    position: relative;
+    font-size: 220px;
+    font-weight: bold;
+    left: 400px;
+    top: 0px;
+    float: right;
+    opacity: 0.1;
+}
+
+#about-us {
+    background: #0066ff;
+    color: white;
+    padding-bottom: 100px; 
+}
+
+#about-us button {
+    background: white;
+    color: #0099FF;
+}
+
+
+footer {
+    margin: 30px;
+}
+
+footer img {
+    display: block;
+    margin: auto;
+}
