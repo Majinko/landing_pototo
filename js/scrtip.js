@@ -62,7 +62,7 @@ $(function() {
       .data("origWidth", $magicLine.width());
   }
 
-  $(document).on("scroll", onScroll);
+  //$(document).on("scroll", onScroll);
 
   function onScroll(event) {
     var scrollPos = $(document).scrollTop();
@@ -77,6 +77,7 @@ $(function() {
         currLink.parent().addClass("active");
 
         handlePositionMagicLine();
+
       } else {
         currLink.parent().removeClass("active");
       }
