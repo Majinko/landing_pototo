@@ -5,15 +5,11 @@ $(function() {
 
   $(".navbar-nav").append("<li id='magic-line'></li>");
   $magicLine = $("#magic-line");
-  $magicLine
-    .width($(".active").width())
-    .css("left", $(".active a").position().left)
-    .data("origLeft", $magicLine.position().left)
-    .data("origWidth", $magicLine.width());
+  handlePositionMagicLine();
 
   $(".navbar-nav li a").click(function() {
     scrollTo($(this));
-    
+
     var $this = $(this);
     $this
       .parent()
@@ -49,12 +45,41 @@ $(function() {
     );
 
   function scrollTo(element) {
-    let cil = element.attr("href");
+    let target = element.attr("href");
     let menu = $(".navbar");
-    let rychlost = 2 * 1000;
+    let speed = 2 * 1000;
 
     $("html, body")
       .stop()
-      .animate({ scrollTop: $(cil).offset().top - menu.height() }, rychlost);
+      .animate({ scrollTop: $(target).offset().top - menu.height() }, speed);
+  }
+
+  function handlePositionMagicLine() {
+    $magicLine
+      .width($(".navbar-nav .active").width())
+      .css("left", $(".active a").position().left)
+      .data("origLeft", $magicLine.position().left)
+      .data("origWidth", $magicLine.width());
+  }
+
+  $(document).on("scroll", onScroll);
+
+  function onScroll(event) {
+    var scrollPos = $(document).scrollTop();
+    $(".navbar-nav a").each(function() {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (
+        refElement.position().top <= scrollPos &&
+        refElement.position().top + refElement.height() > scrollPos
+      ) {
+        $(".ul li").removeClass("active");
+        currLink.parent().addClass("active");
+
+        handlePositionMagicLine();
+      } else {
+        currLink.parent().removeClass("active");
+      }
+    });
   }
 });
