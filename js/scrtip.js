@@ -3,46 +3,52 @@ $(function() {
   /*Activate default tab contents*/
   var leftPos, newWidth, $magicLine;
 
-  $(".navbar-nav").append("<li id='magic-line'></li>");
-  $magicLine = $("#magic-line");
-  handlePositionMagicLine();
+  if ($(window).width() >= 990) {
+    $(".navbar-nav").append("<li id='magic-line'></li>");
+    $magicLine = $("#magic-line");
+    handlePositionMagicLine();
 
-  $(".navbar-nav li a").click(function() {
-    scrollTo($(this));
+    $(".navbar-nav li a").click(function() {
+      scrollTo($(this));
 
-    var $this = $(this);
-    $this
-      .parent()
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
-    $magicLine
-      .data("origLeft", $this.position().left)
-      .data("origWidth", $this.parent().width());
+      var $this = $(this);
+      $this
+        .parent()
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+      $magicLine
+        .data("origLeft", $this.position().left)
+        .data("origWidth", $this.parent().width());
 
-    return false;
-  });
+      return false;
+    });
 
-  /*Magicline hover animation*/
-  $(".navbar-nav li")
-    .find("a")
-    .hover(
-      function() {
-        var $thisBar = $(this);
-        leftPos = $thisBar.position().left;
-        newWidth = $thisBar.parent().width();
-        $magicLine.css({
-          left: leftPos,
-          width: newWidth
-        });
-      },
-      function() {
-        $magicLine.css({
-          left: $magicLine.data("origLeft"),
-          width: $magicLine.data("origWidth")
-        });
-      }
-    );
+    /*Magicline hover animation*/
+    $(".navbar-nav li")
+      .find("a")
+      .hover(
+        function() {
+          var $thisBar = $(this);
+          leftPos = $thisBar.position().left;
+          newWidth = $thisBar.parent().width();
+          $magicLine.css({
+            left: leftPos,
+            width: newWidth
+          });
+        },
+        function() {
+          $magicLine.css({
+            left: $magicLine.data("origLeft"),
+            width: $magicLine.data("origWidth")
+          });
+        }
+      );
+  } else {
+    $(".navbar-nav li a").click(function() {
+      scrollTo($(this));
+    });
+  }
 
   function scrollTo(element) {
     let target = element.attr("href");
@@ -77,7 +83,6 @@ $(function() {
         currLink.parent().addClass("active");
 
         handlePositionMagicLine();
-
       } else {
         currLink.parent().removeClass("active");
       }

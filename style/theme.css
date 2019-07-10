@@ -10815,6 +10815,9 @@ section.rectangle-bg-blue:after {
   .jumbotron-v2 {
     padding-top: 1rem;
   }
+  .btn {
+    padding: 1rem 1rem;
+  }
 }
 
 @media only screen and (max-width: 760px) {
