@@ -10593,19 +10593,24 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.h1, h1 {
+.h1,
+h1 {
+  font-size: 46px;
+  font-weight: 800;
+}
+
+.h2,
+h2 {
   font-size: 46px;
 }
 
-.h2, h2 {
-  font-size: 46px;
-}
-
-.h3, h3 {
+.h3,
+h3 {
   font-size: 26px;
 }
 
-.h4, h4 {
+.h4,
+h4 {
   font-size: 20px;
   line-height: 30px;
 }
@@ -10624,6 +10629,12 @@ body {
 
 .f-600 {
   font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 .theme-bg {
@@ -10700,12 +10711,6 @@ header #magic-line {
 .jumbotron {
   background-color: #f7f9fb;
   padding-top: 15rem;
-}
-
-.jumbotron h1,
-.jumbotron .h1 {
-  font-size: 46px;
-  font-weight: 800;
 }
 
 .jumbotron p.lead {
@@ -10797,5 +10802,21 @@ section.rectangle-bg-blue:after {
 .number-box .number-3 {
   left: 25%;
   top: 15px;
+}
+
+/* ===============
+   Media query
+   =============== */
+@media only screen and (max-width: 990px) {
+  .jumbotron {
+    background-color: #f7f9fb;
+    padding-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .flagstone .b-b-1px, .flagstone .b-r-1px {
+    border: none;
+  }
 }
 /*# sourceMappingURL=theme.css.map */

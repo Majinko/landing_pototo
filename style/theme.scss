@@ -19,6 +19,12 @@ body {
   font-weight: 600;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 .theme-bg {
   background-color: $global-primary-color !important;
 }
@@ -104,12 +110,6 @@ header {
   background-color: #f7f9fb;
   padding-top: 15rem;
   //padding-bottom: 15rem;
-
-  h1,
-  .h1 {
-    font-size: $h1;
-    font-weight: 800;
-  }
 
   p.lead {
     font-size: $global-font-size;
@@ -201,3 +201,7 @@ section.rectangle-bg-blue {
     top: 15px;
   }
 }
+/* ===============
+   Media query
+   =============== */
+@import "import/respons";
